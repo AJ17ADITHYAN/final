@@ -5,7 +5,7 @@ import keras
 from PIL import Image, ImageOps
 import numpy as np
 
-modelpath = 'C:/Users/px/Desktop/Covid Project/models/covidtestmodel.h5'
+modelpath = 'covidtestmodel.h5'
 model = keras.models.load_model(modelpath)
 class_names = ['Emphysema and bronchiectasis',
  'ILD',
