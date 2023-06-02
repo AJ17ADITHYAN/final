@@ -19,9 +19,38 @@ class_names = ['Emphysema and bronchiectasis',
  'pneumonia and bronchiectasis',
  'squamous.cell.carcinoma_left.hilum_T1_N2_M0_IIIa']
 
-st.write("Covid Classifier")
+
+st.title("Lung Disease Classifier")
 file = st.file_uploader("Please upload a lung scan file", type=["jpg", "png"])
 st.set_option('deprecation.showfileUploaderEncoding', False)
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("https://cdn.pixabay.com/photo/2021/11/14/20/08/background-6795624_960_720.jpg");
+background-size: 100%;
+background-position: center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: local;
+}}
+
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+
+[data-testid="stToolbar"] {{
+right: 2rem;
+}}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+
 
 if file is None:
     st.text("Please upload an image file")
