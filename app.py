@@ -84,3 +84,4 @@ else:
     predicted_class = class_names[predicted_index]
     predicted_class
     st.write(predicted_class)
+    st.text("Model still under training Actual results may vary, 90 percent accuracy")
